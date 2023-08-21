@@ -20,6 +20,7 @@ import ckeditor5ListDll from "@ckeditor/ckeditor5-list/build/list.js";
 import ckeditor5PasteFromOfficeDll from "@ckeditor/ckeditor5-paste-from-office/build/paste-from-office.js";
 import ckeditor5FindAndReplaceDll from "@ckeditor/ckeditor5-find-and-replace/build/find-and-replace.js";
 import ckeditor5RemoveFormatDll from "@ckeditor/ckeditor5-remove-format/build/remove-format.js";
+import ckeditor5SourceEditingDll from "@ckeditor/ckeditor5-source-editing/build/source-editing.js";
 import ckeditor5SpecialCharactersDll from "@ckeditor/ckeditor5-special-characters/build/special-characters.js";
 import ckeditor5TableDll from "@ckeditor/ckeditor5-table/build/table.js";
 import ckeditor5WordCountDll from "@ckeditor/ckeditor5-word-count/build/word-count.js";
@@ -29,6 +30,7 @@ import { StrapiMediaLib } from "./plugins/StrapiMediaLib";
 const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
   light: {
     plugins: [
+      window.CKEditor5.sourceEditing.SourceEditing,
       window.CKEditor5.autoformat.Autoformat,
       window.CKEditor5.basicStyles.Bold,
       window.CKEditor5.basicStyles.Italic,
@@ -52,6 +54,8 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
       StrapiMediaLib
     ],
     toolbar: [
+      'sourceEditing',
+      '|',
       'undo', 'redo',
       '|',
       'heading',
@@ -94,6 +98,7 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
 
   standard: {
     plugins: [
+      window.CKEditor5.sourceEditing.SourceEditing,
       window.CKEditor5.autoformat.Autoformat,
       window.CKEditor5.basicStyles.Bold,
       window.CKEditor5.basicStyles.Italic,
@@ -121,6 +126,8 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
       StrapiMediaLib
     ],
     toolbar: [
+        'sourceEditing',
+        '|',
         'undo', 'redo',
         '|',
         'heading',
@@ -165,6 +172,7 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
 
   rich: {
     plugins: [
+      window.CKEditor5.sourceEditing.SourceEditing,
       window.CKEditor5.alignment.Alignment,
       window.CKEditor5.autoformat.Autoformat,
       window.CKEditor5.basicStyles.Bold,
@@ -216,6 +224,8 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
     ],
     toolbar: {
       items: [
+        'sourceEditing',
+        '|',
         'undo', 'redo',
         '|',
         'findAndReplace', 'selectAll',
@@ -230,7 +240,7 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         '|',
         'alignment',
         '|',
-        'bulletedList', 'numberedList', 'todoList', 'outdent', 'indent', 
+        'bulletedList', 'numberedList', 'todoList', 'outdent', 'indent',
       ],
       shouldNotGroupWhenFull: true
     },
