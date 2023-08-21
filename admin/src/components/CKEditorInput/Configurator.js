@@ -68,14 +68,14 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
     ],
     link: {
       decorators: {
-          openInNewTab: {
-            mode: 'manual',
-            label: 'Open in a new tab',
-            defaultValue: true,
-            attributes: {
-              target: '_blank',
-              rel: 'noopener noreferrer'
-            }
+        openInNewTab: {
+          mode: 'manual',
+          label: 'Open in a new tab',
+          defaultValue: true,
+          attributes: {
+            target: '_blank',
+            rel: 'noopener noreferrer'
+          }
         }
       }
     },
@@ -153,14 +153,14 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
     ],
     link: {
       decorators: {
-          openInNewTab: {
-            mode: 'manual',
-            label: 'Open in a new tab',
-            defaultValue: true,
-            attributes: {
-              target: '_blank',
-              rel: 'noopener noreferrer'
-            }
+        openInNewTab: {
+          mode: 'manual',
+          label: 'Open in a new tab',
+          defaultValue: true,
+          attributes: {
+            target: '_blank',
+            rel: 'noopener noreferrer'
+          }
         }
       }
     },
@@ -272,14 +272,14 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
     },
     link: {
       decorators: {
-          openInNewTab: {
-            mode: 'manual',
-            label: 'Open in a new tab',
-            defaultValue: true,
-            attributes: {
-              target: '_blank',
-              rel: 'noopener noreferrer'
-            }
+        openInNewTab: {
+          mode: 'manual',
+          label: 'Open in a new tab',
+          defaultValue: true,
+          attributes: {
+            target: '_blank',
+            rel: 'noopener noreferrer'
+          }
         }
       }
     },
