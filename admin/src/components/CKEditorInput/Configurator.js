@@ -66,6 +66,19 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
       '|',
       'bulletedList', 'numberedList'
     ],
+    link: {
+      decorators: {
+          openInNewTab: {
+            mode: 'manual',
+            label: 'Open in a new tab',
+            defaultValue: true,
+            attributes: {
+              target: '_blank',
+              rel: 'noopener noreferrer'
+            }
+        }
+      }
+    },
     heading: {
       options: [
         { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
@@ -138,6 +151,19 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         '|',
         'bulletedList', 'numberedList', 'outdent', 'indent'
     ],
+    link: {
+      decorators: {
+          openInNewTab: {
+            mode: 'manual',
+            label: 'Open in a new tab',
+            defaultValue: true,
+            attributes: {
+              target: '_blank',
+              rel: 'noopener noreferrer'
+            }
+        }
+      }
+    },
     heading: {
       options: [
         { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
@@ -243,6 +269,19 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         'bulletedList', 'numberedList', 'todoList', 'outdent', 'indent',
       ],
       shouldNotGroupWhenFull: true
+    },
+    link: {
+      decorators: {
+          openInNewTab: {
+            mode: 'manual',
+            label: 'Open in a new tab',
+            defaultValue: true,
+            attributes: {
+              target: '_blank',
+              rel: 'noopener noreferrer'
+            }
+        }
+      }
     },
     heading: {
       options: [
