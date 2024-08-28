@@ -107,6 +107,18 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         'toggleTableCaption'
       ]
     },
+    link: {
+      decorators: {
+        openInNewTab: {
+          mode: 'manual',
+          label: 'Open in a new tab',
+          attributes: {
+            target: '_blank',
+            rel: 'noopener noreferrer'
+          }
+        }
+      }
+    }
   },
 
   standard: {
@@ -194,6 +206,18 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         'toggleTableCaption'
       ]
     },
+    link: {
+      decorators: {
+        openInNewTab: {
+          mode: 'manual',
+          label: 'Open in a new tab',
+          attributes: {
+            target: '_blank',
+            rel: 'noopener noreferrer'
+          }
+        }
+      }
+    }
   },
 
   rich: {
@@ -380,6 +404,18 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
       columns: 5,
       documentColors: 10,
     },
+    link: {
+      decorators: {
+        openInNewTab: {
+          mode: 'manual',
+          label: 'Open in a new tab',
+          attributes: {
+            target: '_blank',
+            rel: 'noopener noreferrer'
+          }
+        }
+      }
+    }
   }
 };
 
