@@ -421,7 +421,10 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
 
 export default class Configurator {
   constructor ( fieldConfig ) {
-    this.fieldConfig = fieldConfig;
+    this.fieldConfig = {
+      ...fieldConfig,
+      licenseKey: 'GPL'
+    };
   }
 
   getEditorConfig() {
