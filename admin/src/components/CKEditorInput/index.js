@@ -9,27 +9,28 @@ import Configurator from './Configurator';
 import MediaLib from '../MediaLib';
 
 import { CKEditor } from '@ckeditor/ckeditor5-react';
-import ckeditor5Dll from 'ckeditor5/build/ckeditor5-dll.js';
-import ckeditor5EditorClassicDll from '@ckeditor/ckeditor5-editor-classic/build/editor-classic.js';
+
+const { ClassicEditor } = window.CKEDITOR;
 
 import sanitize from './utils/utils';
 
-const CKEditorInput = ({
-  attribute,
-  onChange,
-  name,
-  value,
-  disabled,
-  labelAction,
-  intlLabel,
-  required,
-  description,
-  error
-}) => {
+const CKEditorInput = ( props ) => {
+  const {
+    attribute,
+    onChange,
+    name,
+    value,
+    disabled,
+    labelAction,
+    intlLabel,
+    required,
+    description,
+    error
+  } = props;
   const [ editorInstance, setEditorInstance ] = useState(false);
   const { formatMessage } = useIntl();
-  const { maxLengthCharacters:maxLength , ...options } = attribute.options;
-  const configurator = new Configurator( { options, maxLength } );
+  const { maxLengthCharacters:maxLength, licenseKey, ...options } = attribute.options;
+  const configurator = new Configurator( { options, maxLength, licenseKey } );
   const editorConfig = configurator.getEditorConfig();
 
   const wordCounter = useRef( null );
@@ -74,7 +75,7 @@ const CKEditorInput = ({
         </FieldLabel>
         <GlobalStyling />
         <CKEditor
-          editor={ window.CKEditor5.editorClassic.ClassicEditor }
+          editor={ ClassicEditor }
           disabled={ disabled }
           data={ value }
           onReady={ ( editor ) => {
@@ -131,4 +132,4 @@ CKEditorInput.propTypes = {
   value: PropTypes.string,
 };
 
-export default CKEditorInput;
+export { CKEditorInput };
