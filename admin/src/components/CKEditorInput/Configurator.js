@@ -421,10 +421,7 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
 
 export default class Configurator {
   constructor ( fieldConfig ) {
-    this.fieldConfig = {
-      ...fieldConfig,
-      licenseKey: 'GPL'
-    };
+    this.fieldConfig = fieldConfig;
   }
 
   getEditorConfig() {
@@ -453,11 +450,20 @@ export default class Configurator {
 
     switch ( presetName ) {
       case 'light':
-        return CKEDITOR_BASE_CONFIG_FOR_PRESETS.light;
+        return {
+          ...CKEDITOR_BASE_CONFIG_FOR_PRESETS.light,
+          licenseKey: 'GPL'
+      };
       case 'standard':
-        return CKEDITOR_BASE_CONFIG_FOR_PRESETS.standard;
+        return {
+          ...CKEDITOR_BASE_CONFIG_FOR_PRESETS.standard,
+          licenseKey: 'GPL'
+      };
       case 'rich':
-        return CKEDITOR_BASE_CONFIG_FOR_PRESETS.rich;
+        return {
+          ...CKEDITOR_BASE_CONFIG_FOR_PRESETS.rich,
+          licenseKey: 'GPL'
+      };
       default:
         throw new Error('Invalid preset name ' + presetName);
     }
